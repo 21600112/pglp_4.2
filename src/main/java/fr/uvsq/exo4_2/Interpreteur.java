@@ -1,6 +1,6 @@
 package fr.uvsq.exo4_2;
 
-import  fr.uvsq.exo4_2.commandes.Command;
+import fr.uvsq.exo4_2.commandes.Command;
 import fr.uvsq.exo4_2.commandes.Quit;
 import fr.uvsq.exo4_2.commandes.Undo;
 import java.util.HashMap;
@@ -9,8 +9,11 @@ public class Interpreteur {
 	
 	private HashMap<String,Command> mapCommand;
 	
-	public Interpreteur() {
+	public Interpreteur(Undo u) {
 		mapCommand = new HashMap<String,Command>();
+	
+		this.mapCommand.put("undo",u);
+		this.mapCommand.put("quit",new Quit());
 	}
 	
 	public void execute(final String name) throws Exception{
@@ -32,11 +35,5 @@ public class Interpreteur {
 		this.mapCommand.put(name,c);
 	}
 	
-	public void initInterpreteur(Undo u) {
-		Quit q = new Quit();
-		
-		this.mapCommand.put("undo",u);
-		this.mapCommand.put("quit",q);
-	}
 	
 }
