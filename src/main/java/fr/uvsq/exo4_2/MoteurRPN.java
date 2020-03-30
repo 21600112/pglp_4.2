@@ -13,10 +13,10 @@ public class MoteurRPN {
 	public MoteurRPN(final Stack <Double> pOperandes){
 		stackOperandes = pOperandes;
 		stackOperations = new HashMap<String,Operation>();	
-		this.stackOperations.put("addition",new Addition());
-		this.stackOperations.put("soustraction",new Soustraction());
-		this.stackOperations.put("multiplication",new Multiplication());
-		this.stackOperations.put("division",new Division());
+		this.stackOperations.put("+",new Addition());
+		this.stackOperations.put("-",new Soustraction());
+		this.stackOperations.put("*",new Multiplication());
+		this.stackOperations.put("/",new Division());
 	}
 	
 	public void addOperande(final Double pOperande) {
