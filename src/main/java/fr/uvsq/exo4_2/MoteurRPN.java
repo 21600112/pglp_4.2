@@ -9,10 +9,12 @@ public class MoteurRPN {
 	
 	private Stack<Double> stackOperandes;
 	private HashMap<String,Operation> stackOperations;
+	private Undo u;
 	
-	public MoteurRPN(final Stack <Double> pOperandes){
+	public MoteurRPN(final Stack <Double> pOperandes,Undo pU){
 		stackOperandes = pOperandes;
-		stackOperations = new HashMap<String,Operation>();	
+		stackOperations = new HashMap<String,Operation>();
+		u = pU;
 		this.stackOperations.put("+",new Addition());
 		this.stackOperations.put("-",new Soustraction());
 		this.stackOperations.put("*",new Multiplication());
@@ -31,7 +33,9 @@ public class MoteurRPN {
 				double ope1 = this.stackOperandes.pop();
 				
 				try {
-					this.stackOperations.get(pOperation).execute(ope1,ope2);
+					double res = this.stackOperations.get(pOperation).execute(ope1,ope2);
+					this.stackOperandes.push(res);
+					u.actualisationStack();
 				}
 				catch(Exception e) {
 					this.stackOperandes.push(ope1);

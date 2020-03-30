@@ -10,17 +10,19 @@ public class SaisieRPN {
 	private Interpreteur i;
 	private Stack<Double> stackOperandes;
 	private Scanner s;
+	private Undo u;
 	
 	public SaisieRPN() {
 		stackOperandes = new Stack<Double>();
-		Undo u = new Undo(stackOperandes);
+		u = new Undo(stackOperandes);
 		i = new Interpreteur(u);
-		m = new MoteurRPN(stackOperandes);
+		m = new MoteurRPN(stackOperandes,u);
 		
 	}
 	
 	public void calcul() throws Exception{
 		
+		System.out.println("Entrez un nombre, une operation quit ou undo");
 		s = new Scanner(System.in);
 		String line="";
 		boolean notQuit= true;
@@ -30,6 +32,7 @@ public class SaisieRPN {
 			try {
 				double d = s.nextDouble();
 				m.addOperande(d);
+				u.actualisationStack();
 			}
 			catch(Exception moteurOperande) {
 				try {
