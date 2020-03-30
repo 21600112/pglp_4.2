@@ -1,0 +1,12 @@
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/commandes/Undo.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/commandes/Command.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/operation/Operation.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/Interpreteur.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/operation/Addition.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/CalculatriceRPN.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/operation/Soustraction.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/operation/Multiplication.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/operation/Division.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/commandes/Quit.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/SaisieRPN.java
+/home/darksice/eclipse-workspace/pglp_4.2/src/main/java/fr/uvsq/exo4_2/MoteurRPN.java

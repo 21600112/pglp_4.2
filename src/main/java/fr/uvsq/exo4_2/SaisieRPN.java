@@ -45,7 +45,7 @@ public class SaisieRPN {
 						i.execute(line);
 					}
 					catch(Exception interpreteur) {
-						interpreteur.printStackTrace();
+						System.err.println("commande non reconnue");
 					}
 				}
 				
