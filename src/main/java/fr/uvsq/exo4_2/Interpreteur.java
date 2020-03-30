@@ -32,8 +32,7 @@ public class Interpreteur {
 		this.mapCommand.put(name,c);
 	}
 	
-	public void initInterpreteur() {
-		Undo u = new Undo();
+	public void initInterpreteur(Undo u) {
 		Quit q = new Quit();
 		
 		this.mapCommand.put("undo",u);
